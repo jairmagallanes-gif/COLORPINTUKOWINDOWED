@@ -1,0 +1,12 @@
+node_modules/
+runtime/
+ColorLink.exe
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+!.env.local.example
+.npm-cache/

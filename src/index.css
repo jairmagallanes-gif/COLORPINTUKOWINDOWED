@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --color-orange-vibrant: #FF6B35;
+  --color-orange-hover: #E85520;
+  --color-blue-indigo: #2E3192;
+  --color-blue-indigo-light: #3D40B0;
+  --color-blue-indigo-dark: #1E216B;
+  --color-mustard-yellow: #F7C548;
+  --color-mustard-hover: #E3B034;
+  --color-mustard-bg: #FEF7E6;
+  --color-gray-canvas: #F4F4F6;
+}
+
+/* Custom Design Tokens */
+.bg-canvas {
+  background-color: #F4F4F6;
+}
+
+.bg-orange-vibrant {
+  background-color: #FF6B35;
+}
+
+.bg-orange-vibrant:hover {
+  background-color: #E85520;
+}
+
+.text-orange-vibrant {
+  color: #FF6B35;
+}
+
+.border-orange-vibrant {
+  border-color: #FF6B35;
+}
+
+.bg-blue-indigo {
+  background-color: #2E3192;
+}
+
+.bg-blue-indigo:hover {
+  background-color: #242777;
+}
+
+.text-blue-indigo {
+  color: #2E3192;
+}
+
+.border-blue-indigo {
+  border-color: #2E3192;
+}
+
+.bg-mustard-yellow {
+  background-color: #F7C548;
+}
+
+.text-mustard-yellow {
+  color: #B48408;
+}
+
+.border-mustard-yellow {
+  border-color: #F7C548;
+}
+
+/* Button CTA standard */
+.btn-cta-orange {
+  background-color: #FF6B35;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cta-orange:hover {
+  background-color: #E85520;
+  box-shadow: 0 4px 14px 0 rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-cta-orange:active {
+  transform: translateY(0);
+}
+
+/* Optimized Print Styling */
+@media print {
+  html, body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force A4 / Letter page layout with clean margins */
+  @page {
+    margin: 10mm 12mm;
+    size: auto;
+  }
+
+  /* Hide navigation, toolbars, buttons and background overlays when printing */
+  nav, header, footer, .print\:hidden, button:not(.printable-element) {
+    display: none !important;
+  }
+
+  /* Isolation mode: when body has is-pintuco-printing, hide all non-target elements */
+  body.is-pintuco-printing * {
+    visibility: hidden;
+  }
+
+  body.is-pintuco-printing .pintuco-active-print-target,
+  body.is-pintuco-printing .pintuco-active-print-target * {
+    visibility: visible;
+  }
+
+  body.is-pintuco-printing .pintuco-active-print-target {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  /* Prevent page breaks inside critical elements */
+  tr, .avoid-break {
+    page-break-inside: avoid !important;
+  }
+}

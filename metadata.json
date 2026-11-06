@@ -1,0 +1,6 @@
+{
+  "name": "ColorLink Pintuco",
+  "description": "Ecosistema inteligente de captura estructurada, diagnóstico técnico, inventario y orquestación de servicios para Pintuco.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
